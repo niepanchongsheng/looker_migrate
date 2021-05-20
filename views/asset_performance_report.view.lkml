@@ -176,4 +176,14 @@ view: asset_performance_report {
       end ;;
   }
 
+  measure: all_conversions {
+    type: number
+    sql: sum(${TABLE}.metrics_all_conversions) ;;
+  }
+
+  measure: all_conversions_value {
+    type: number
+    sql: sum(${TABLE}.metrics_all_conversions_value) ;;
+  }
+
 }

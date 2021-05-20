@@ -12,6 +12,11 @@ view: asset_performance_report {
     sql: ${TABLE}.campaign_id ;;
   }
 
+  dimension: campaign_name {
+    type: string
+    sql: ${TABLE}.campaign_name ;;
+  }
+
   dimension: network_type {
     type: string
     sql:

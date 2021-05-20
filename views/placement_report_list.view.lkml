@@ -134,5 +134,25 @@ view: placement_report_list {
     sql: ${campaign_id} ;;
   }
 
+  measure: mobile_app_impressions {
+    type: sum
+    sql:
+      case
+        when ${TABLE}.group_placement_view_placement_type = 'MOBILE_APPLICATION' then ${TABLE}.metrics_impressions
+        else 0
+      end ;;
+  }
+
+  measure: youtube_channel_impressions {
+    type: sum
+    sql:
+      case
+        when ${TABLE}.group_placement_view_placement_type = 'YOUTUBE_CHANNEL'
+          and ${TABLE}.group_placement_view_display_name <> ''
+          then ${TABLE}.metrics_impressions
+        else 0
+      end ;;
+  }
+
 
 }

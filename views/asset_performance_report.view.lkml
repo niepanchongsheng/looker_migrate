@@ -86,6 +86,10 @@ view: asset_performance_report {
   dimension: link {
     type: string
     sql: CONCAT("https://www.youtube.com/watch?v=", ${TABLE}.asset_youtube_video_asset_youtube_video_id) ;;
+    link: {
+      label: "View {{value}}"
+      url: "{{link._value}}"
+    }
   }
 
 

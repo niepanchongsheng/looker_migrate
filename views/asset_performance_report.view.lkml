@@ -65,7 +65,7 @@ view: asset_performance_report {
   dimension: asset_thumbnail {
     type: string
     sql: ${TABLE}.asset_thumbnail ;;
-    html: <img src={{value}} width="150" height="120">;;
+    html: <img src={{value}} width="120" height="80">;;
   }
 
   dimension: asset_id {

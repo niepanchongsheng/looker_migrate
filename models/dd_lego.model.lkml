@@ -18,19 +18,35 @@ access_grant : view_agg_marketing_roi {
 explore: asset_performance_report {
   required_access_grants : [ view_agg_marketing_roi ]
 
+  access_filter: {
+    field: app_id
+    user_attribute: app_id
+  }
 }
 
 explore: placement_report_agg {
   required_access_grants : [ view_agg_marketing_roi ]
 
+  access_filter: {
+    field: app_id
+    user_attribute: app_id
+  }
 }
 
 explore: placement_report_list {
   required_access_grants : [ view_agg_marketing_roi ]
 
+  access_filter: {
+    field: app_id
+    user_attribute: app_id
+  }
 }
 
 explore: placement_conversion_report {
   required_access_grants : [ view_agg_marketing_roi ]
 
+  access_filter: {
+    field: app_id
+    user_attribute: app_id
+  }
 }

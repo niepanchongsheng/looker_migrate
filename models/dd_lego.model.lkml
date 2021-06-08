@@ -10,13 +10,13 @@ datagroup: dd_lego_default_datagroup {
 
 persist_with: dd_lego_default_datagroup
 
-access_grant : marketing_can_see {
-  user_attribute : marketing_can_see
+access_grant : can_view_marketing_table {
+  user_attribute : can_view_marketing_table
   allowed_values : ["yes"]
 }
 
 explore: asset_performance_report {
-  required_access_grants : [ marketing_can_see ]
+  required_access_grants : [ can_view_marketing_table ]
 
   access_filter: {
     field: app_id
@@ -25,7 +25,7 @@ explore: asset_performance_report {
 }
 
 explore: placement_report_agg {
-  required_access_grants : [ marketing_can_see ]
+  required_access_grants : [ can_view_marketing_table ]
 
   access_filter: {
     field: app_id
@@ -34,7 +34,7 @@ explore: placement_report_agg {
 }
 
 explore: placement_report_list {
-  required_access_grants : [ marketing_can_see ]
+  required_access_grants : [ can_view_marketing_table ]
 
   access_filter: {
     field: app_id
@@ -43,7 +43,7 @@ explore: placement_report_list {
 }
 
 explore: placement_conversion_report {
-  required_access_grants : [ marketing_can_see ]
+  required_access_grants : [ can_view_marketing_table ]
 
   access_filter: {
     field: app_id

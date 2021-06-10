@@ -13,7 +13,7 @@ view: placement_conversion_report {
   }
 
   dimension: campaign_id {
-    type: string
+    type: number
     sql: ${TABLE}.campaign_id ;;
   }
 

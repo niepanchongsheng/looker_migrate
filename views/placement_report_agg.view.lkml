@@ -12,7 +12,7 @@ view: placement_report_agg {
   }
 
   dimension: campaign_id {
-    type: string
+    type: number
     sql: ${TABLE}.campaign_id ;;
   }
 

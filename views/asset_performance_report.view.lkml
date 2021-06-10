@@ -8,7 +8,7 @@ view: asset_performance_report {
   }
 
   dimension: campaign_id {
-    type: string
+    type: number
     sql: ${TABLE}.campaign_id ;;
   }
 

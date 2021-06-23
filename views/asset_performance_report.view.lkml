@@ -78,6 +78,16 @@ view: asset_performance_report {
     sql: ${TABLE}.asset_name ;;
   }
 
+  dimension:  account_id{
+    type: string
+    sql: ${TABLE}.customer_id ;;
+  }
+
+  dimension: account_name {
+    type: string
+    sql: ${TABLE}.customer_descriptive_name ;;
+  }
+
   dimension: Performance_Labelv {
     type: string
     sql: ${TABLE}.ad_group_ad_asset_view_performance_label ;;

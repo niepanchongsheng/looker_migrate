@@ -1,5 +1,5 @@
 view: asset_performance_report {
-  sql_table_name: ads_reports_data.snd_asset_performance_report
+  sql_table_name: ads_reports_data_v4.app_trd_asset_perf_report
     ;;
 
   dimension: app_id {

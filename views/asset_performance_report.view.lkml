@@ -75,7 +75,7 @@ view: asset_performance_report {
 
   dimension: asset_name {
     type: string
-    sql: ${TABLE}.asset_name ;;
+    sql: ${TABLE}.video_title ;;
   }
 
   dimension:  account_id{

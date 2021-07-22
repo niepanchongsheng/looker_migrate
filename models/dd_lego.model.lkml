@@ -50,3 +50,13 @@ explore: placement_conversion_report {
     user_attribute: app_id
   }
 }
+
+
+explore: uac_report_gas {
+  required_access_grants : [ can_view_marketing_table ]
+
+  access_filter: {
+    field: app_id
+    user_attribute: app_id
+  }
+}

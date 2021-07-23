@@ -224,13 +224,6 @@ view: uac_report_gas {
     value_format_name: decimal_2
   }
 
-  measure: CostNonInstalls   {
-    label: "CostNonInstalls"
-    type: number
-    sql: sum(cast(${TABLE}.CostNonInstalls as float64))  ;;
-    value_format_name: decimal_2
-  }
-
   measure: conversions   {
     label: "conversions"
     type: number
@@ -252,45 +245,10 @@ view: uac_report_gas {
     value_format_name: decimal_2
   }
 
-  measure: installs_adjusted     {
-    label: "installs_adjusted"
-    type: number
-    sql: sum(cast(${TABLE}.installs_adjusted as float64))    ;;
-    value_format_name: decimal_2
-  }
-
   measure: InApp     {
     label: "InApp"
     type: number
     sql: sum(cast(${TABLE}.InApp as float64))    ;;
-    value_format_name: decimal_2
-  }
-
-  measure: inapps_adjusted       {
-    label: "inapps_adjusted"
-    type: number
-    sql: sum(cast(${TABLE}.inapps_adjusted as float64))      ;;
-    value_format_name: decimal_2
-  }
-
-  measure: engagements       {
-    label: "engagements"
-    type: number
-    sql: sum(cast(${TABLE}.engagements as float64))      ;;
-    value_format_name: decimal_2
-  }
-
-  measure: non_click_interactions    {
-    label: "non_click_interactions"
-    type: number
-    sql: sum(cast(${TABLE}.non_click_interactions as int64))     ;;
-    value_format_name: decimal_0
-  }
-
-  measure: conversion_value      {
-    label: "conversion_value"
-    type: number
-    sql: sum(cast(${TABLE}.conversion_value as float64))       ;;
     value_format_name: decimal_2
   }
 
@@ -326,13 +284,6 @@ view: uac_report_gas {
     label: "InApp_day_0"
     type: number
     sql: sum(cast(${TABLE}.InApp_day_0 as float64))      ;;
-    value_format_name: decimal_2
-  }
-
-  measure: all_conversions       {
-    label: "all_conversions"
-    type: number
-    sql: sum(cast(${TABLE}.all_conversions as float64))      ;;
     value_format_name: decimal_2
   }
 

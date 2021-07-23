@@ -14,7 +14,7 @@ view: uac_report_gas {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}.Day ;;
+    sql: cast(${TABLE}.Day as date) ;;
   }
 
   dimension: AccountName {

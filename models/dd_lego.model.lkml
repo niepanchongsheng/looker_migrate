@@ -60,3 +60,12 @@ explore: uac_report_gas {
     user_attribute: app_id
   }
 }
+
+explore: uac_report_gas_list {
+  required_access_grants : [ can_view_marketing_table ]
+
+  access_filter: {
+    field: app_id
+    user_attribute: app_id
+  }
+}

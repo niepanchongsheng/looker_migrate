@@ -140,6 +140,10 @@ view: uac_report_gas {
   dimension: LinkToCampaign {
     type: string
     sql: ${TABLE}.LinkToCampaign ;;
+    link: {
+      label: "URL:"
+      url: "{{value}}"
+    }
   }
 
   dimension: ImageSize {
@@ -177,9 +181,13 @@ view: uac_report_gas {
     sql: ${TABLE}.RefinedImageSize   ;;
   }
 
-  dimension: Link  {
+  dimension: Link {
     type: string
-    sql: ${TABLE}.Link   ;;
+    sql: ${TABLE}.Link ;;
+    link: {
+      label: "URL:"
+      url: "{{value}}"
+    }
   }
 
   dimension: Status {

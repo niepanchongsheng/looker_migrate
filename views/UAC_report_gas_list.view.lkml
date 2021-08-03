@@ -350,6 +350,9 @@ view: uac_report_gas_list {
     sql: sum(cast(${TABLE}.conversion_value_day_30 as float64))          ;;
     value_format_name: decimal_2
   }
-
+  filter: date_filter {
+    type: date
+    sql: _TABLE_SUFFIX BETWEEN safe_cast(date({%date_start date_filter %}) as string) AND safe_cast(date({%date_end date_filter %}) as string);;
+  }
 
 }

@@ -1,5 +1,6 @@
 view: uac_report_gas_list {
-  sql_table_name: uac_report_pack_last31days_*
+  sql_table_name:
+  `uac_report.uac_report_pack_last31days_*`
 
     ;;
 
@@ -141,6 +142,10 @@ view: uac_report_gas_list {
   dimension: LinkToCampaign {
     type: string
     sql: ${TABLE}.LinkToCampaign ;;
+    link: {
+      label: "URL:"
+      url: "{{value}}"
+    }
   }
 
   dimension: ImageSize {
@@ -178,9 +183,13 @@ view: uac_report_gas_list {
     sql: ${TABLE}.RefinedImageSize   ;;
   }
 
-  dimension: Link  {
+  dimension: Link {
     type: string
-    sql: ${TABLE}.Link   ;;
+    sql: ${TABLE}.Link ;;
+    link: {
+      label: "URL:"
+      url: "{{value}}"
+    }
   }
 
   dimension: Status {
@@ -350,9 +359,11 @@ view: uac_report_gas_list {
     sql: sum(cast(${TABLE}.conversion_value_day_30 as float64))          ;;
     value_format_name: decimal_2
   }
+
+
   filter: date_filter {
     type: date
-    sql: _TABLE_SUFFIX BETWEEN safe_cast(date({%date_start date_filter %}) as string) AND safe_cast(date({%date_end date_filter %}) as string);;
+    sql: _TABLE_SUFFIX BETWEEN replace(safe_cast(date({%date_start date_filter %}) as string),'-','') AND replace(safe_cast(date({%date_end date_filter %}) as string),'-','');;
   }
 
 }

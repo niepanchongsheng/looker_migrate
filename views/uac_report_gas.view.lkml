@@ -205,11 +205,6 @@ view: uac_report_gas {
     sql: ${TABLE}.Device ;;
   }
 
-  measure: CampaignCost {
-    type: number
-    sql: sum(cast(${TABLE}.CampaignCost as float64)) ;;
-    value_format_name: decimal_2
-  }
 
   measure: clicks {
     label: "clicks"

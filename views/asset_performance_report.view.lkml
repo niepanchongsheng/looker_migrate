@@ -55,11 +55,18 @@ view: asset_performance_report {
       end;;
   }
 
-  dimension: segments_date {
-    type: date
-    datatype: date
+  dimension_group: segments {
+    type: time
+    timeframes: [
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
     convert_tz: no
-    sql: date(${TABLE}.segments_date) ;;
+    datatype: date
+    sql: date(${TABLE}.segments_date)  ;;
   }
 
   dimension: asset_thumbnail {

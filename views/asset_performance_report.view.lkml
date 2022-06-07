@@ -7,6 +7,12 @@ view: asset_performance_report {
     sql: ${TABLE}.campaign_app_campaign_setting_app_id ;;
   }
 
+  dimension: country_code {
+    type: string
+    sql: ${TABLE}.country_code ;;
+  }
+
+
   dimension: campaign_id {
     type: number
     sql: ${TABLE}.campaign_id ;;

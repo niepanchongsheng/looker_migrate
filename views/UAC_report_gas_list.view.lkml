@@ -111,7 +111,11 @@ view: uac_report_gas_list {
 
   dimension: pre_creativeid {
     type: string
-    sql: split(${TABLE}.AdAsset,'_')[OFFSET(0)] ;;
+    sql: case when ${TABLE}.creativeid like 'DS2D%' then split(${TABLE}.creativeid,'_')[OFFSET(0)]
+              when ${TABLE}.creativeid like 'DS3D%' then split(${TABLE}.creativeid,'_')[OFFSET(0)]
+              when ${TABLE}.creativeid like 'DSKO%' then split(${TABLE}.creativeid,'_')[OFFSET(0)]
+              when ${TABLE}.creativeid like 'Play%' then split(${TABLE}.creativeid,'_')[OFFSET(0)]
+              else '' end ;;
   }
 
   dimension: FeedDataOriginal {

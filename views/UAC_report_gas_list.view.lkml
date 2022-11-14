@@ -109,6 +109,11 @@ view: uac_report_gas_list {
     sql: ${TABLE}.AdAsset ;;
   }
 
+  dimension: pre_creativeid {
+    type: string
+    sql: split(${TABLE}.AdAsset,'_')[OFFSET(0)] ;;
+  }
+
   dimension: FeedDataOriginal {
     type: string
     sql: ${TABLE}.FeedDataOriginal ;;

@@ -115,6 +115,7 @@ view: uac_report_gas_list {
               when ${TABLE}.AdAsset like 'DS3D%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
               when ${TABLE}.AdAsset like 'DSKO%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
               when ${TABLE}.AdAsset like 'Play%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
+              when ${TABLE}.AdAsset like 'FFSVD%' then split(${TABLE}.AdAsset,' ')[OFFSET(0)]
               else '' end ;;
   }
 

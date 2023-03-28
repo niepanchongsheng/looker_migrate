@@ -111,16 +111,9 @@ view: uac_report_gas_list {
 
   dimension: pre_creativeid {
     type: string
-    sql: case when ${TABLE}.AdAsset like 'DS2D%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
-              when ${TABLE}.AdAsset like 'DS3D%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
-              when ${TABLE}.AdAsset like 'DSKO%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
+    sql: case when ${TABLE}.AdAsset like 'DS%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
               when ${TABLE}.AdAsset like 'Play%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
-              when ${TABLE}.AdAsset like 'FFSVD%' then split(${TABLE}.AdAsset,' ')[OFFSET(0)]
-              when ${TABLE}.AdAsset like 'DSCS%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
-              when ${TABLE}.AdAsset like 'DSMS%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
-              when ${TABLE}.AdAsset like 'FFSPW%' then split(${TABLE}.AdAsset,' ')[OFFSET(0)]
-              when ${TABLE}.AdAsset like 'FFSHC%' then split(${TABLE}.AdAsset,' ')[OFFSET(0)]
-              when ${TABLE}.AdAsset like 'DSBC%' then split(${TABLE}.AdAsset,'_')[OFFSET(0)]
+              when ${TABLE}.AdAsset like 'FFS%' then split(${TABLE}.AdAsset,' ')[OFFSET(0)]
               else '' end ;;
   }
 

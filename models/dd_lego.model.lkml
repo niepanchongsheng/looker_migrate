@@ -22,6 +22,8 @@ explore: asset_performance_report {
     field: app_id
     user_attribute: app_id
   }
+
+  description: "Asset Performance Report表为依据谷歌Lego报表数据对应制作的Looker报表。"
 }
 
 explore: placement_report_agg {
@@ -31,6 +33,8 @@ explore: placement_report_agg {
     field: app_id
     user_attribute: app_id
   }
+
+  description: "Placement Report Agg表为依据谷歌Lego报表数据对应制作的Looker报表，已于2021.6停止更新。"
 }
 
 explore: placement_report_list {
@@ -40,6 +44,8 @@ explore: placement_report_list {
     field: app_id
     user_attribute: app_id
   }
+
+  description: "Placement Report List表为依据谷歌Lego报表数据对应制作的Looker报表，已于2021.6停止更新。"
 }
 
 explore: placement_conversion_report {
@@ -49,6 +55,8 @@ explore: placement_conversion_report {
     field: app_id
     user_attribute: app_id
   }
+
+  description: "Placement Conversion Report表为依据谷歌Lego报表数据对应制作的Looker报表，已于2021.6停止更新。"
 }
 
 
@@ -59,6 +67,8 @@ explore: uac_report_gas {
     field: app_id
     user_attribute: app_id
   }
+
+  description: "Uac Report Gas表为谷歌提供的数据表，该表呈现前一天形成的最近31天的数据。"
 }
 
 explore: uac_report_gas_list {
@@ -68,4 +78,6 @@ explore: uac_report_gas_list {
     field: app_id
     user_attribute: app_id
   }
+
+  description: "Uac Report Gas List 是Uac Report Gas形成的每日表的集合，可查看历史数据，选择date filter指定查看某一天形成的数据表，用Date Date字段筛选查看那天之前31天内的历史数据。"
 }
